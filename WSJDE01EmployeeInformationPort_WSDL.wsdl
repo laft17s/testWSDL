@@ -1,0 +1,194 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:WSJDE01EmployeeInformation" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:weo="http://www.example.org" xmlns:caw="http://com.andespetro.webservice" targetNamespace="urn:WSJDE01EmployeeInformation">
+<types>
+<xsd:schema targetNamespace="urn:WSJDE01EmployeeInformation/types" elementFormDefault="qualified"/>
+<xsd:schema>
+<xsd:import schemaLocation="WSJDE01EmployeeInformationPort.xsd" namespace="http://www.example.org"/>
+</xsd:schema>
+</types>
+<portType name="WSJDE01EmployeeInformation">
+<operation name="getAllEmployeeInformation">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeRequest"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeInformation"/>
+</operation>
+<operation name="getEmployeeInformationByAddressNumber">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeAddressNumber"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeInformation"/>
+</operation>
+<operation name="getEmployeeInformationBySearchType">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeSearchType"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeInformation"/>
+</operation>
+<operation name="getEmployeeInformationByName">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeName"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeInformation"/>
+</operation>
+<operation name="getEmployeeInformationByDepartment">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeDepartment"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeInformation"/>
+</operation>
+<operation name="getEmployeeInformationByUserName">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeUserName"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeInformation"/>
+</operation>
+<operation name="getAllDepartment">
+<input message="tns:WSJDE01EmployeeInformation_DepartmentRequest"/>
+<output message="tns:WSJDE01EmployeeInformation_DepartmentInformation"/>
+</operation>
+<operation name="getEmployeeInformationByCriteria">
+<input message="tns:WSJDE01EmployeeInformation_Criteria"/>
+<output message="tns:WSJDE01EmployeeInformation_CriteriaInformation"/>
+</operation>
+<operation name="getAllEmployeeOrganizationalInformation">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeOrganizationalRequest"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeOrganizationalInformation"/>
+</operation>
+<operation name="getEmployeeOrganizationByAddressNumber">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeOrganizationalAddressNumber"/>
+<output message="tns:WSJDE01EmployeeInformation_EmployeeOrganizationalInformation"/>
+</operation>
+<!--operation name="getContactByAddressNumber">
+<input message="tns:WSJDE01EmployeeInformation_EmployeeAddressNumber"/>
+<output message="tns:WSJDE01EmployeeInformation_ContactInformation"/>
+</operation-->
+</portType>
+<message name="WSJDE01EmployeeInformation_EmployeeAddressNumber">
+<part name="addressNumber" element="weo:EmployeeAddressNumber"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeSearchType">
+<part name="searchType" element="weo:EmployeeSearchType"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeName">
+<part name="name" element="weo:EmployeeName"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeDepartment">
+<part name="department" element="weo:EmployeeDepartment"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeUserName">
+<part name="userName" element="weo:EmployeeUserName"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeOrganizationalInformation">
+<part name="employeeOrganizationInformation" element="weo:EmployeeOrganizationalInformation"/>
+</message>
+<message name="WSJDE01EmployeeInformation_DepartmentInformation">
+<part name="departmentInformation" element="weo:DepartmentInformation"/>
+</message>
+<message name="WSJDE01EmployeeInformation_Criteria">
+<part name="criteria" element="weo:Criteria"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeInformation">
+<part name="employeeInformation" element="weo:EmployeeInformation"/>
+</message>
+<message name="WSJDE01EmployeeInformation_CriteriaInformation">
+<part name="criteriaInformation" element="weo:CriteriaInformation"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeRequest">
+<part name="request" element="weo:EmployeeRequest"/>
+</message>
+<message name="WSJDE01EmployeeInformation_DepartmentRequest">
+<part name="request" element="weo:DepartmentRequest"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeOrganizationalRequest">
+<part name="request" element="weo:EmployeeOrganizationalRequest"/>
+</message>
+<message name="WSJDE01EmployeeInformation_EmployeeOrganizationalAddressNumber">
+<part name="addressNumber" element="weo:EmployeeOrganizationalAddressNumber"/>
+</message>
+<binding name="WSJDE01EmployeeInformationSOAP12Binding" type="tns:WSJDE01EmployeeInformation">
+<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="getAllEmployeeInformation">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getAllEmployeeInformation"/>
+<input>
+<soap12:body use="literal" parts="request"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeInformationByAddressNumber">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeInformationByAddressNumber"/>
+<input>
+<soap12:body use="literal" parts="addressNumber"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeInformationBySearchType">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeInformationBySearchType"/>
+<input>
+<soap12:body use="literal" parts="searchType"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeInformationByName">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeInformationByName"/>
+<input>
+<soap12:body use="literal" parts="name"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeInformationByDepartment">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeInformationByDepartment"/>
+<input>
+<soap12:body use="literal" parts="department"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeInformationByUserName">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeInformationByUserName"/>
+<input>
+<soap12:body use="literal" parts="userName"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeInformation"/>
+</output>
+</operation>
+<operation name="getAllDepartment">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getAllDepartment"/>
+<input>
+<soap12:body use="literal" parts="request"/>
+</input>
+<output>
+<soap12:body use="literal" parts="departmentInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeInformationByCriteria">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeInformationByCriteria"/>
+<input>
+<soap12:body use="literal" parts="criteria"/>
+</input>
+<output>
+<soap12:body use="literal" parts="criteriaInformation"/>
+</output>
+</operation>
+<operation name="getAllEmployeeOrganizationalInformation">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getAllEmployeeOrganizationalInformation"/>
+<input>
+<soap12:body use="literal" parts="request"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeOrganizationInformation"/>
+</output>
+</operation>
+<operation name="getEmployeeOrganizationByAddressNumber">
+<soap12:operation style="document" soapAction="urn:WSJDE01EmployeeInformation/getEmployeeOrganizationByAddressNumber"/>
+<input>
+<soap12:body use="literal" parts="addressNumber"/>
+</input>
+<output>
+<soap12:body use="literal" parts="employeeOrganizationInformation"/>
+</output>
+</operation>
+</binding>
+<service name="WSJDE01EmployeeInformation">
+<port name="WSJDE01EmployeeInformationPort" binding="tns:WSJDE01EmployeeInformationSOAP12Binding">
+<soap12:address location="http://localhost:8088/WSJDE01EmployeeInformation/WSJDE01EmployeeInformationPort"/>
+</port>
+</service>
+</definitions>

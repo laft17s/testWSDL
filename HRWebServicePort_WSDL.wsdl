@@ -1,0 +1,589 @@
+<!--  Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.5.  -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:HRWebServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:weo="http://www.example.org" targetNamespace="urn:HRWebServices">
+<types>
+<xsd:schema targetNamespace="urn:HRWebServices/types" elementFormDefault="qualified"/>
+<xsd:schema>
+<xsd:import schemaLocation="HRWebService.xsd" namespace="http://www.example.org"/>
+</xsd:schema>
+</types>
+<portType name="HRWebService">
+<operation name="GetAbsencesByEmplIdAndDates">
+<input message="tns:HRWebService_GetAbsencesByEmplIdAndDatesElement"/>
+<output message="tns:HRWebService_GetAbsencesByEmplIdAndDatesResponse"/>
+</operation>
+<operation name="GetActivePortalMessages">
+<input message="tns:HRWebService_GetActivePortalMessagesElement"/>
+<output message="tns:HRWebService_GetActivePortalMessagesResponse"/>
+</operation>
+<operation name="GetAllEmployeeInforByUser">
+<input message="tns:HRWebService_GetAllEmployeeInforByUserElement"/>
+<output message="tns:HRWebService_GetAllEmployeeInforByUserResponse"/>
+</operation>
+<operation name="GetAllEmployeesHPC">
+<input message="tns:HRWebService_GetAllEmployeesHPCElement"/>
+<output message="tns:HRWebService_GetAllEmployeesHPCResponse"/>
+</operation>
+<operation name="GetAllIncomesDebitsByEmpId">
+<input message="tns:HRWebService_GetAllIncomesDebitsByEmpIdElement"/>
+<output message="tns:HRWebService_GetAllIncomesDebitsByEmpIdResponse"/>
+</operation>
+<operation name="GetAllPortalMessages">
+<input message="tns:HRWebService_GetAllPortalMessagesElement"/>
+<output message="tns:HRWebService_GetAllPortalMessagesResponse"/>
+</operation>
+<operation name="GetAllRequestStatus">
+<input message="tns:HRWebService_GetAllRequestStatusElement"/>
+<output message="tns:HRWebService_GetAllRequestStatusResponse"/>
+</operation>
+<operation name="GetAttendanceDetailsByDateAndEmplId">
+<input message="tns:HRWebService_GetAttendanceDetailsByDateAndEmplIdElement"/>
+<output message="tns:HRWebService_GetAttendanceDetailsByDateAndEmplIdResponse"/>
+</operation>
+<operation name="GetAttendanceReportByCostCenter">
+<input message="tns:HRWebService_GetAttendanceReportByCostCenterElement"/>
+<output message="tns:HRWebService_GetAttendanceReportByCostCenterResponse"/>
+</operation>
+<operation name="GetErrorByUser">
+<input message="tns:HRWebService_GetErrorByUserElement"/>
+<output message="tns:HRWebService_GetErrorByUserResponse"/>
+</operation>
+<operation name="GetHPCByEmployeeId">
+<input message="tns:HRWebService_GetHPCByEmployeeIdElement"/>
+<output message="tns:HRWebService_GetHPCByEmployeeIdResponse"/>
+</operation>
+<operation name="GetHistoricalHPCByEmplId">
+<input message="tns:HRWebService_GetHistoricalHPCByEmplIdElement"/>
+<output message="tns:HRWebService_GetHistoricalHPCByEmplIdResponse"/>
+</operation>
+<operation name="GetLabourHistoryByEmplId">
+<input message="tns:HRWebService_GetLabourHistoryByEmplIdElement"/>
+<output message="tns:HRWebService_GetLabourHistoryByEmplIdResponse"/>
+</operation>
+<operation name="GetLastUpdatedAttendance">
+<input message="tns:HRWebService_GetLastUpdatedAttendanceElement"/>
+<output message="tns:HRWebService_GetLastUpdatedAttendanceResponse"/>
+</operation>
+<operation name="GetLoanByAquId">
+<input message="tns:HRWebService_GetLoanByAquIdElement"/>
+<output message="tns:HRWebService_GetLoanByAquIdResponse"/>
+</operation>
+<operation name="GetLoansByEmplID">
+<input message="tns:HRWebService_GetLoansByEmplIDElement"/>
+<output message="tns:HRWebService_GetLoansByEmplIDResponse"/>
+</operation>
+<operation name="GetReportAttendanceSummary">
+<input message="tns:HRWebService_GetReportAttendanceSummaryElement"/>
+<output message="tns:HRWebService_GetReportAttendanceSummaryResponse"/>
+</operation>
+<operation name="GetRequestListByEmplIdAndStatusId">
+<input message="tns:HRWebService_GetRequestListByEmplIdAndStatusIdElement"/>
+<output message="tns:HRWebService_GetRequestListByEmplIdAndStatusIdResponse"/>
+</operation>
+<operation name="GetRequestLoanByRequestNumber">
+<input message="tns:HRWebService_GetRequestLoanByRequestNumberElement"/>
+<output message="tns:HRWebService_GetRequestLoanByRequestNumberResponse"/>
+</operation>
+<operation name="GetSavingPlanByEmpID">
+<input message="tns:HRWebService_GetSavingPlanByEmpIDElement"/>
+<output message="tns:HRWebService_GetSavingPlanByEmpIDResponse"/>
+</operation>
+<operation name="GetTrainingHistoryByEmplId">
+<input message="tns:HRWebService_GetTrainingHistoryByEmplIdElement"/>
+<output message="tns:HRWebService_GetTrainingHistoryByEmplIdResponse"/>
+</operation>
+<operation name="IsEmployeeContractor">
+<input message="tns:HRWebService_IsEmployeeContractorElement"/>
+<output message="tns:HRWebService_IsEmployeeContractorResponse"/>
+</operation>
+<operation name="RemoveMessagesById">
+<input message="tns:HRWebService_RemoveMessagesByIdElement"/>
+<output message="tns:HRWebService_RemoveMessagesByIdResponse"/>
+</operation>
+<operation name="RetrieveTimeSheetByEmpIDAndDates">
+<input message="tns:HRWebService_RetrieveTimeSheetByEmpIDAndDatesElement"/>
+<output message="tns:HRWebService_RetrieveTimeSheetByEmpIDAndDatesResponse"/>
+</operation>
+<operation name="SaveMessages">
+<input message="tns:HRWebService_SaveMessagesElement"/>
+<output message="tns:HRWebService_SaveMessagesResponse"/>
+</operation>
+<operation name="SendLoanRequest">
+<input message="tns:HRWebService_SendLoanRequestelement"/>
+<output message="tns:HRWebService_SendLoanRequestResponse"/>
+</operation>
+<operation name="UpdateAquIdInLoans">
+<input message="tns:HRWebService_UpdateAquIdInLoansElement"/>
+<output message="tns:HRWebService_UpdateAquIdInLoansResponse"/>
+</operation>
+<operation name="UpdateLoanStatusByAquId">
+<input message="tns:HRWebService_UpdateLoanStatusByAquIdElement"/>
+<output message="tns:HRWebService_UpdateLoanStatusByAquIdResponse"/>
+</operation>
+<operation name="VerifyAbsencesByEmplIdAndOneDate">
+<input message="tns:HRWebService_VerifyAbsencesByEmplIdAndOneDateElement"/>
+<output message="tns:HRWebService_VerifyAbsencesByEmplIdAndOneDateResponse"/>
+</operation>
+<operation name="FindEmployeesBySupervisorIdAndLevel">
+<input message="tns:HRWebService_FindEmployeesBySupervisorIdAndLevelElement"/>
+<output message="tns:HRWebService_FindEmployeesBySupervisorIdAndLevelResponse"/>
+</operation>
+</portType>
+<message name="HRWebService_FindEmployeesBySupervisorIdAndLevelResponse">
+<part name="FindEmployeesBySupervisorIdAndLevelResponse" element="weo:FindEmployeesBySupervisorIdAndLevelResponse"/>
+</message>
+<message name="HRWebService_GetAbsencesByEmplIdAndDatesElement">
+<part name="GetAbsencesByEmplIdAndDatesElement" element="weo:GetAbsencesByEmplIdAndDatesElement"/>
+</message>
+<message name="HRWebService_GetAbsencesByEmplIdAndDatesResponse">
+<part name="GetAbsencesByEmplIdAndDatesResponse" element="weo:GetAbsencesByEmplIdAndDatesResponse"/>
+</message>
+<message name="HRWebService_GetActivePortalMessagesElement">
+<part name="GetActivePortalMessagesElement" element="weo:GetActivePortalMessagesElement"/>
+</message>
+<message name="HRWebService_GetActivePortalMessagesResponse">
+<part name="GetActivePortalMessagesResponse" element="weo:GetActivePortalMessagesResponse"/>
+</message>
+<message name="HRWebService_GetAllEmployeeInforByUserElement">
+<part name="GetAllEmployeeInforByUserElement" element="weo:GetAllEmployeeInforByUserElement"/>
+</message>
+<message name="HRWebService_GetAllEmployeeInforByUserResponse">
+<part name="GetAllEmployeeInforByUserResponse" element="weo:GetAllEmployeeInforByUserResponse"/>
+</message>
+<message name="HRWebService_GetAllEmployeesHPCElement">
+<part name="GetAllEmployeesHPCElement" element="weo:GetAllEmployeesHPCElement"/>
+</message>
+<message name="HRWebService_GetAllEmployeesHPCResponse">
+<part name="GetAllEmployeesHPCResponse" element="weo:GetAllEmployeesHPCResponse"/>
+</message>
+<message name="HRWebService_GetAllIncomesDebitsByEmpIdElement">
+<part name="GetAllIncomesDebitsByEmpIdElement" element="weo:GetAllIncomesDebitsByEmpIdElement"/>
+</message>
+<message name="HRWebService_GetAllIncomesDebitsByEmpIdResponse">
+<part name="GetAllIncomesDebitsByEmpIdResponse" element="weo:GetAllIncomesDebitsByEmpIdResponse"/>
+</message>
+<message name="HRWebService_GetAllPortalMessagesElement">
+<part name="GetAllPortalMessagesElement" element="weo:GetAllPortalMessagesElement"/>
+</message>
+<message name="HRWebService_GetAllPortalMessagesResponse">
+<part name="GetAllPortalMessagesResponse" element="weo:GetAllPortalMessagesResponse"/>
+</message>
+<message name="HRWebService_GetAllRequestStatusElement">
+<part name="GetAllRequestStatusElement" element="weo:GetAllRequestStatusElement"/>
+</message>
+<message name="HRWebService_GetAllRequestStatusResponse">
+<part name="GetAllRequestStatusResponse" element="weo:GetAllRequestStatusResponse"/>
+</message>
+<message name="HRWebService_GetAttendanceDetailsByDateAndEmplIdElement">
+<part name="GetAttendanceDetailsByDateAndEmplIdElement" element="weo:GetAttendanceDetailsByDateAndEmplIdElement"/>
+</message>
+<message name="HRWebService_GetAttendanceDetailsByDateAndEmplIdResponse">
+<part name="GetAttendanceDetailsByDateAndEmplIdResponse" element="weo:GetAttendanceDetailsByDateAndEmplIdResponse"/>
+</message>
+<message name="HRWebService_GetAttendanceReportByCostCenterElement">
+<part name="GetAttendanceReportByCostCenterElement" element="weo:GetAttendanceReportByCostCenterElement"/>
+</message>
+<message name="HRWebService_GetAttendanceReportByCostCenterResponse">
+<part name="GetAttendanceReportByCostCenterResponse" element="weo:GetAttendanceReportByCostCenterResponse"/>
+</message>
+<message name="HRWebService_GetErrorByUserElement">
+<part name="GetErrorByUserElement" element="weo:GetErrorByUserElement"/>
+</message>
+<message name="HRWebService_GetErrorByUserResponse">
+<part name="GetErrorByUserResponse" element="weo:GetErrorByUserResponse"/>
+</message>
+<message name="HRWebService_GetHPCByEmployeeIdElement">
+<part name="GetHPCByEmployeeIdElement" element="weo:GetHPCByEmployeeIdElement"/>
+</message>
+<message name="HRWebService_GetHPCByEmployeeIdResponse">
+<part name="GetHPCByEmployeeIdResponse" element="weo:GetHPCByEmployeeIdResponse"/>
+</message>
+<message name="HRWebService_GetHistoricalHPCByEmplIdElement">
+<part name="GetHistoricalHPCByEmplIdElement" element="weo:GetHistoricalHPCByEmplIdElement"/>
+</message>
+<message name="HRWebService_GetHistoricalHPCByEmplIdResponse">
+<part name="GetHistoricalHPCByEmplIdResponse" element="weo:GetHistoricalHPCByEmplIdResponse"/>
+</message>
+<message name="HRWebService_GetLabourHistoryByEmplIdElement">
+<part name="GetLabourHistoryByEmplIdElement" element="weo:GetLabourHistoryByEmplIdElement"/>
+</message>
+<message name="HRWebService_GetLabourHistoryByEmplIdResponse">
+<part name="GetLabourHistoryByEmplIdResponse" element="weo:GetLabourHistoryByEmplIdResponse"/>
+</message>
+<message name="HRWebService_GetLastUpdatedAttendanceElement">
+<part name="GetLastUpdatedAttendanceElement" element="weo:GetLastUpdatedAttendanceElement"/>
+</message>
+<message name="HRWebService_GetLastUpdatedAttendanceResponse">
+<part name="GetLastUpdatedAttendanceResponse" element="weo:GetLastUpdatedAttendanceResponse"/>
+</message>
+<message name="HRWebService_GetLoanByAquIdElement">
+<part name="GetLoanByAquIdElement" element="weo:GetLoanByAquIdElement"/>
+</message>
+<message name="HRWebService_GetLoanByAquIdResponse">
+<part name="GetLoanByAquIdResponse" element="weo:GetLoanByAquIdResponse"/>
+</message>
+<message name="HRWebService_GetLoansByEmplIDElement">
+<part name="GetLoansByEmplIDElement" element="weo:GetLoansByEmplIDElement"/>
+</message>
+<message name="HRWebService_GetLoansByEmplIDResponse">
+<part name="GetLoansByEmplIDResponse" element="weo:GetLoansByEmplIDResponse"/>
+</message>
+<message name="HRWebService_GetReportAttendanceSummaryElement">
+<part name="GetReportAttendanceSummaryElement" element="weo:GetReportAttendanceSummaryElement"/>
+</message>
+<message name="HRWebService_GetReportAttendanceSummaryResponse">
+<part name="GetReportAttendanceSummaryResponse" element="weo:GetReportAttendanceSummaryResponse"/>
+</message>
+<message name="HRWebService_GetRequestListByEmplIdAndStatusIdElement">
+<part name="GetRequestListByEmplIdAndStatusIdElement" element="weo:GetRequestListByEmplIdAndStatusIdElement"/>
+</message>
+<message name="HRWebService_GetRequestListByEmplIdAndStatusIdResponse">
+<part name="GetRequestListByEmplIdAndStatusIdResponse" element="weo:GetRequestListByEmplIdAndStatusIdResponse"/>
+</message>
+<message name="HRWebService_GetRequestLoanByRequestNumberElement">
+<part name="GetRequestLoanByRequestNumberElement" element="weo:GetRequestLoanByRequestNumberElement"/>
+</message>
+<message name="HRWebService_GetRequestLoanByRequestNumberResponse">
+<part name="GetRequestLoanByRequestNumberResponse" element="weo:GetRequestLoanByRequestNumberResponse"/>
+</message>
+<message name="HRWebService_GetSavingPlanByEmpIDElement">
+<part name="GetSavingPlanByEmpIDElement" element="weo:GetSavingPlanByEmpIDElement"/>
+</message>
+<message name="HRWebService_GetSavingPlanByEmpIDResponse">
+<part name="GetSavingPlanByEmpIDResponse" element="weo:GetSavingPlanByEmpIDResponse"/>
+</message>
+<message name="HRWebService_GetTrainingHistoryByEmplIdElement">
+<part name="GetTrainingHistoryByEmplIdElement" element="weo:GetTrainingHistoryByEmplIdElement"/>
+</message>
+<message name="HRWebService_GetTrainingHistoryByEmplIdResponse">
+<part name="GetTrainingHistoryByEmplIdResponse" element="weo:GetTrainingHistoryByEmplIdResponse"/>
+</message>
+<message name="HRWebService_IsEmployeeContractorElement">
+<part name="IsEmployeeContractorElement" element="weo:IsEmployeeContractorElement"/>
+</message>
+<message name="HRWebService_IsEmployeeContractorResponse">
+<part name="IsEmployeeContractorResponse" element="weo:IsEmployeeContractorResponse"/>
+</message>
+<message name="HRWebService_RemoveMessagesByIdElement">
+<part name="RemoveMessagesByIdElement" element="weo:RemoveMessagesByIdElement"/>
+</message>
+<message name="HRWebService_RemoveMessagesByIdResponse">
+<part name="RemoveMessagesByIdResponse" element="weo:RemoveMessagesByIdResponse"/>
+</message>
+<message name="HRWebService_RetrieveTimeSheetByEmpIDAndDatesElement">
+<part name="RetrieveTimeSheetByEmpIDAndDatesElement" element="weo:RetrieveTimeSheetByEmpIDAndDatesElement"/>
+</message>
+<message name="HRWebService_RetrieveTimeSheetByEmpIDAndDatesResponse">
+<part name="RetrieveTimeSheetByEmpIDAndDatesResponse" element="weo:RetrieveTimeSheetByEmpIDAndDatesResponse"/>
+</message>
+<message name="HRWebService_SaveMessagesElement">
+<part name="SaveMessagesElement" element="weo:SaveMessagesElement"/>
+</message>
+<message name="HRWebService_SaveMessagesResponse">
+<part name="SaveMessagesResponse" element="weo:SaveMessagesResponse"/>
+</message>
+<message name="HRWebService_SendLoanRequestelement">
+<part name="SendLoanRequestElement" element="weo:SendLoanRequestelement"/>
+</message>
+<message name="HRWebService_SendLoanRequestResponse">
+<part name="SendLoanRequestResponse" element="weo:SendLoanRequestResponse"/>
+</message>
+<message name="HRWebService_UpdateAquIdInLoansElement">
+<part name="UpdateAquIdInLoansElement" element="weo:UpdateAquIdInLoansElement"/>
+</message>
+<message name="HRWebService_UpdateAquIdInLoansResponse">
+<part name="UpdateAquIdInLoansResponse" element="weo:UpdateAquIdInLoansResponse"/>
+</message>
+<message name="HRWebService_UpdateLoanStatusByAquIdElement">
+<part name="UpdateLoanStatusByAquIdElement" element="weo:UpdateLoanStatusByAquIdElement"/>
+</message>
+<message name="HRWebService_UpdateLoanStatusByAquIdResponse">
+<part name="UpdateLoanStatusByAquIdResponse" element="weo:UpdateLoanStatusByAquIdResponse"/>
+</message>
+<message name="HRWebService_VerifyAbsencesByEmplIdAndOneDateElement">
+<part name="VerifyAbsencesByEmplIdAndOneDateElement" element="weo:VerifyAbsencesByEmplIdAndOneDateElement"/>
+</message>
+<message name="HRWebService_VerifyAbsencesByEmplIdAndOneDateResponse">
+<part name="VerifyAbsencesByEmplIdAndOneDateResponse" element="weo:VerifyAbsencesByEmplIdAndOneDateResponse"/>
+</message>
+<message name="HRWebService_FindEmployeesBySupervisorIdAndLevelElement">
+<part name="FindEmployeesBySupervisorIdAndLevelElement" element="weo:FindEmployeesBySupervisorIdAndLevelElement"/>
+</message>
+<binding name="HRWebServiceSOAP11Binding" type="tns:HRWebService">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="GetAbsencesByEmplIdAndDates">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAbsencesByEmplIdAndDates"/>
+<input>
+<soap:body use="literal" parts="GetAbsencesByEmplIdAndDatesElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAbsencesByEmplIdAndDatesResponse"/>
+</output>
+</operation>
+<operation name="GetActivePortalMessages">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetActivePortalMessages"/>
+<input>
+<soap:body use="literal" parts="GetActivePortalMessagesElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetActivePortalMessagesResponse"/>
+</output>
+</operation>
+<operation name="GetAllEmployeeInforByUser">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAllEmployeeInforByUser"/>
+<input>
+<soap:body use="literal" parts="GetAllEmployeeInforByUserElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAllEmployeeInforByUserResponse"/>
+</output>
+</operation>
+<operation name="GetAllEmployeesHPC">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAllEmployeesHPC"/>
+<input>
+<soap:body use="literal" parts="GetAllEmployeesHPCElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAllEmployeesHPCResponse"/>
+</output>
+</operation>
+<operation name="GetAllIncomesDebitsByEmpId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAllIncomesDebitsByEmpId"/>
+<input>
+<soap:body use="literal" parts="GetAllIncomesDebitsByEmpIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAllIncomesDebitsByEmpIdResponse"/>
+</output>
+</operation>
+<operation name="GetAllPortalMessages">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAllPortalMessages"/>
+<input>
+<soap:body use="literal" parts="GetAllPortalMessagesElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAllPortalMessagesResponse"/>
+</output>
+</operation>
+<operation name="GetAllRequestStatus">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAllRequestStatus"/>
+<input>
+<soap:body use="literal" parts="GetAllRequestStatusElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAllRequestStatusResponse"/>
+</output>
+</operation>
+<operation name="GetAttendanceDetailsByDateAndEmplId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAttendanceDetailsByDateAndEmplId"/>
+<input>
+<soap:body use="literal" parts="GetAttendanceDetailsByDateAndEmplIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAttendanceDetailsByDateAndEmplIdResponse"/>
+</output>
+</operation>
+<operation name="GetAttendanceReportByCostCenter">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetAttendanceReportByCostCenter"/>
+<input>
+<soap:body use="literal" parts="GetAttendanceReportByCostCenterElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetAttendanceReportByCostCenterResponse"/>
+</output>
+</operation>
+<operation name="GetErrorByUser">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetErrorByUser"/>
+<input>
+<soap:body use="literal" parts="GetErrorByUserElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetErrorByUserResponse"/>
+</output>
+</operation>
+<operation name="GetHPCByEmployeeId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetHPCByEmployeeId"/>
+<input>
+<soap:body use="literal" parts="GetHPCByEmployeeIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetHPCByEmployeeIdResponse"/>
+</output>
+</operation>
+<operation name="GetHistoricalHPCByEmplId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetHistoricalHPCByEmplId"/>
+<input>
+<soap:body use="literal" parts="GetHistoricalHPCByEmplIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetHistoricalHPCByEmplIdResponse"/>
+</output>
+</operation>
+<operation name="GetLabourHistoryByEmplId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetLabourHistoryByEmplId"/>
+<input>
+<soap:body use="literal" parts="GetLabourHistoryByEmplIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetLabourHistoryByEmplIdResponse"/>
+</output>
+</operation>
+<operation name="GetLastUpdatedAttendance">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetLastUpdatedAttendance"/>
+<input>
+<soap:body use="literal" parts="GetLastUpdatedAttendanceElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetLastUpdatedAttendanceResponse"/>
+</output>
+</operation>
+<operation name="GetLoanByAquId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetLoanByAquId"/>
+<input>
+<soap:body use="literal" parts="GetLoanByAquIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetLoanByAquIdResponse"/>
+</output>
+</operation>
+<operation name="GetLoansByEmplID">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetLoansByEmplID"/>
+<input>
+<soap:body use="literal" parts="GetLoansByEmplIDElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetLoansByEmplIDResponse"/>
+</output>
+</operation>
+<operation name="GetReportAttendanceSummary">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetReportAttendanceSummary"/>
+<input>
+<soap:body use="literal" parts="GetReportAttendanceSummaryElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetReportAttendanceSummaryResponse"/>
+</output>
+</operation>
+<operation name="GetRequestListByEmplIdAndStatusId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetRequestListByEmplIdAndStatusId"/>
+<input>
+<soap:body use="literal" parts="GetRequestListByEmplIdAndStatusIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetRequestListByEmplIdAndStatusIdResponse"/>
+</output>
+</operation>
+<operation name="GetRequestLoanByRequestNumber">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetRequestLoanByRequestNumber"/>
+<input>
+<soap:body use="literal" parts="GetRequestLoanByRequestNumberElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetRequestLoanByRequestNumberResponse"/>
+</output>
+</operation>
+<operation name="GetSavingPlanByEmpID">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetSavingPlanByEmpID"/>
+<input>
+<soap:body use="literal" parts="GetSavingPlanByEmpIDElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetSavingPlanByEmpIDResponse"/>
+</output>
+</operation>
+<operation name="GetTrainingHistoryByEmplId">
+<soap:operation style="document" soapAction="urn:HRWebServices/GetTrainingHistoryByEmplId"/>
+<input>
+<soap:body use="literal" parts="GetTrainingHistoryByEmplIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="GetTrainingHistoryByEmplIdResponse"/>
+</output>
+</operation>
+<operation name="IsEmployeeContractor">
+<soap:operation style="document" soapAction="urn:HRWebServices/IsEmployeeContractor"/>
+<input>
+<soap:body use="literal" parts="IsEmployeeContractorElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="IsEmployeeContractorResponse"/>
+</output>
+</operation>
+<operation name="RemoveMessagesById">
+<soap:operation style="document" soapAction="urn:HRWebServices/RemoveMessagesById"/>
+<input>
+<soap:body use="literal" parts="RemoveMessagesByIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="RemoveMessagesByIdResponse"/>
+</output>
+</operation>
+<operation name="RetrieveTimeSheetByEmpIDAndDates">
+<soap:operation style="document" soapAction="urn:HRWebServices/RetrieveTimeSheetByEmpIDAndDates"/>
+<input>
+<soap:body use="literal" parts="RetrieveTimeSheetByEmpIDAndDatesElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="RetrieveTimeSheetByEmpIDAndDatesResponse"/>
+</output>
+</operation>
+<operation name="SaveMessages">
+<soap:operation style="document" soapAction="urn:HRWebServices/SaveMessages"/>
+<input>
+<soap:body use="literal" parts="SaveMessagesElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="SaveMessagesResponse"/>
+</output>
+</operation>
+<operation name="SendLoanRequest">
+<soap:operation style="document" soapAction="urn:HRWebServices/SendLoanRequest"/>
+<input>
+<soap:body use="literal" parts="SendLoanRequestElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="SendLoanRequestResponse"/>
+</output>
+</operation>
+<operation name="UpdateAquIdInLoans">
+<soap:operation style="document" soapAction="urn:HRWebServices/UpdateAquIdInLoans"/>
+<input>
+<soap:body use="literal" parts="UpdateAquIdInLoansElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="UpdateAquIdInLoansResponse"/>
+</output>
+</operation>
+<operation name="UpdateLoanStatusByAquId">
+<soap:operation style="document" soapAction="urn:HRWebServices/UpdateLoanStatusByAquId"/>
+<input>
+<soap:body use="literal" parts="UpdateLoanStatusByAquIdElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="UpdateLoanStatusByAquIdResponse"/>
+</output>
+</operation>
+<operation name="VerifyAbsencesByEmplIdAndOneDate">
+<soap:operation style="document" soapAction="urn:HRWebServices/VerifyAbsencesByEmplIdAndOneDate"/>
+<input>
+<soap:body use="literal" parts="VerifyAbsencesByEmplIdAndOneDateElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="VerifyAbsencesByEmplIdAndOneDateResponse"/>
+</output>
+</operation>
+<operation name="FindEmployeesBySupervisorIdAndLevel">
+<soap:operation style="document" soapAction="urn:HRWebServices/FindEmployeesBySupervisorIdAndLevel"/>
+<input>
+<soap:body use="literal" parts="FindEmployeesBySupervisorIdAndLevelElement"/>
+</input>
+<output>
+<soap:body use="literal" parts="FindEmployeesBySupervisorIdAndLevelResponse"/>
+</output>
+</operation>
+</binding>
+<service name="HRWebService">
+<port name="HRWebServicePort" binding="tns:HRWebServiceSOAP11Binding">
+<soap12:address location="http://localhost:8088/HRWebServices/HRWebServicePort"/>
+</port>
+</service>
+</definitions>
