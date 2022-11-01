@@ -1,0 +1,158 @@
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.example.org" name="UpdateInsertHRInformationService">
+<types>
+<xsd:schema>
+<xsd:import namespace="http://www.example.org" schemaLocation="UpdateInsertHRInformationService.xsd"/>
+</xsd:schema>
+</types>
+<message name="updateLicenseInformation">
+<part name="parameters" element="tns:updateLicenseInformation"/>
+</message>
+<message name="updateLicenseInformationResponse">
+<part name="parameters" element="tns:updateLicenseInformationResponse"/>
+</message>
+<message name="BusinessServiceException">
+<part name="fault" element="tns:BusinessServiceException"/>
+</message>
+<message name="updateAddress">
+<part name="parameters" element="tns:updateAddress"/>
+</message>
+<message name="updateAddressResponse">
+<part name="parameters" element="tns:updateAddressResponse"/>
+</message>
+<message name="updatePhoneNumbers">
+<part name="parameters" element="tns:updatePhoneNumbers"/>
+</message>
+<message name="updatePhoneNumbersResponse">
+<part name="parameters" element="tns:updatePhoneNumbersResponse"/>
+</message>
+<message name="updateHPC">
+<part name="parameters" element="tns:updateHPC"/>
+</message>
+<message name="updateHPCResponse">
+<part name="parameters" element="tns:updateHPCResponse"/>
+</message>
+<message name="deleteEmergencyContacts">
+<part name="parameters" element="tns:deleteEmergencyContacts"/>
+</message>
+<message name="deleteEmergencyContactsResponse">
+<part name="parameters" element="tns:deleteEmergencyContactsResponse"/>
+</message>
+<message name="updateInsertEmergencyContacts">
+<part name="parameters" element="tns:updateInsertEmergencyContacts"/>
+</message>
+<message name="updateInsertEmergencyContactsResponse">
+<part name="parameters" element="tns:updateInsertEmergencyContactsResponse"/>
+</message>
+<portType name="UpdateInsertHRInformationPortType">
+<operation name="updateLicenseInformation">
+<input message="tns:updateLicenseInformation"/>
+<output message="tns:updateLicenseInformationResponse"/>
+<fault message="tns:BusinessServiceException" name="BusinessServiceException"/>
+</operation>
+<operation name="updateAddress">
+<input message="tns:updateAddress"/>
+<output message="tns:updateAddressResponse"/>
+<fault message="tns:BusinessServiceException" name="BusinessServiceException"/>
+</operation>
+<operation name="updatePhoneNumbers">
+<input message="tns:updatePhoneNumbers"/>
+<output message="tns:updatePhoneNumbersResponse"/>
+<fault message="tns:BusinessServiceException" name="BusinessServiceException"/>
+</operation>
+<operation name="updateHPC">
+<input message="tns:updateHPC"/>
+<output message="tns:updateHPCResponse"/>
+<fault message="tns:BusinessServiceException" name="BusinessServiceException"/>
+</operation>
+<operation name="deleteEmergencyContacts">
+<input message="tns:deleteEmergencyContacts"/>
+<output message="tns:deleteEmergencyContactsResponse"/>
+<fault message="tns:BusinessServiceException" name="BusinessServiceException"/>
+</operation>
+<operation name="updateInsertEmergencyContacts">
+<input message="tns:updateInsertEmergencyContacts"/>
+<output message="tns:updateInsertEmergencyContactsResponse"/>
+<fault message="tns:BusinessServiceException" name="BusinessServiceException"/>
+</operation>
+</portType>
+<binding name="UpdateInsertHRInformationPortBinding" type="tns:UpdateInsertHRInformationPortType">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="updateLicenseInformation">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="BusinessServiceException">
+<soap:fault name="BusinessServiceException" use="literal"/>
+</fault>
+</operation>
+<operation name="updateAddress">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="BusinessServiceException">
+<soap:fault name="BusinessServiceException" use="literal"/>
+</fault>
+</operation>
+<operation name="updatePhoneNumbers">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="BusinessServiceException">
+<soap:fault name="BusinessServiceException" use="literal"/>
+</fault>
+</operation>
+<operation name="updateHPC">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="BusinessServiceException">
+<soap:fault name="BusinessServiceException" use="literal"/>
+</fault>
+</operation>
+<operation name="deleteEmergencyContacts">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="BusinessServiceException">
+<soap:fault name="BusinessServiceException" use="literal"/>
+</fault>
+</operation>
+<operation name="updateInsertEmergencyContacts">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="BusinessServiceException">
+<soap:fault name="BusinessServiceException" use="literal"/>
+</fault>
+</operation>
+</binding>
+<service name="UpdateInsertHRInformationService">
+<port name="UpdateInsertHRInformationPort" binding="tns:UpdateInsertHRInformationPortBinding">
+<soap:address location="http://localhost:8088/PD910/UpdateInsertHRInformationServicePort"/>
+</port>
+</service>
+</definitions>
