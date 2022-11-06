@@ -152,7 +152,7 @@
 </binding>
 <service name="UpdateInsertHRInformationService">
 <port name="UpdateInsertHRInformationPort" binding="tns:UpdateInsertHRInformationPortBinding">
-<soap:address location="https://dba1-2800-bf0-80e7-11b9-c147-15f0-4956-3b63.sa.ngrok.io/PD910/UpdateInsertHRInformationServicePort"/>
+<soap:address location="https://c72f-2800-bf0-80e7-11b9-2db1-8bc5-cf9b-5d4c.sa.ngrok.io/PD910/UpdateInsertHRInformationServicePort"/>
 </port>
 </service>
 </definitions>
